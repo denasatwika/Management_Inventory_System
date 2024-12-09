@@ -1,5 +1,36 @@
 * text=auto
 
+# Penanganan file Laravel
+*.blade.php text eol=lf
+*.php text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.env text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# File biner - tidak diubah
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.ico binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.eot binary
+
+# File khusus untuk GitHub - diabaikan saat diekspor
+/.github export-ignore
+CHANGELOG.md export-ignore
+/tests export-ignore
+phpunit.xml export-ignore
+.env.example export-ignore
+
 *.blade.php diff=html
 *.css diff=css
 *.html diff=html
