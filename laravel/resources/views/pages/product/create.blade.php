@@ -58,7 +58,7 @@
                                 <span class="invalid-feedback">{{ $message }}</span>
                             @enderror
                                 @foreach ($categories as $category)
-                                 <option value="{{ $category->id }}"> {{ $category->name }} </option>
+                                 <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}> {{ $category->name }} </option>
                                 @endforeach
                             </select>
                         </div>
@@ -69,7 +69,7 @@
                                 <span class="invalid-feedback">{{ $message }}</span>
                             @enderror
                                 @foreach ($statuses as $status)
-                                 <option value="{{ $status->id }}"> {{ $status->name }} </option>
+                                 <option value="{{ $status->id }}" {{ old('status_id') == $status->id ? 'selected' : '' }}> {{ $status->name }} </option>
                                 @endforeach
                             </select>
                         </div>
