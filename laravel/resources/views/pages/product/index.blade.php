@@ -3,7 +3,7 @@
 @section('header')
 <div class="row mb-2">
     <div class="col-sm-6">
-        <h1> Dashboard</h1>
+        <h1> Produk </h1>
     </div>
     <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
@@ -34,6 +34,7 @@
                                 <th> Kode</th> 
                                 <th> Kategori </th>
                                 <th> Status </th>
+                                <th> Metode </th>
                             </tr>
                         <body>
                             @foreach ($products as $product)
@@ -45,6 +46,16 @@
                                 <td> {{ $product -> sku }} </td> 
                                 <td> {{ $product -> category -> name }}</td>
                                 <td> {{ $product -> status -> name }}</td> 
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="/product/edit/{{ $product->id }}" class="btn btn-sm btn-warning mr-2"> Ubah </a>
+                                        <form action="/product/ {{ $product->id }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                        <button type="submit" class="btn btn-sm btn-danger"> Hapus </button>
+                                        </form>
+                                    </div>
+                                </td>
                                 {{-- <td> {{ $product->status == 'available' ? 'Tersedia' : ($product->status == 'unavailable' ? 'Tidak Tersedia') }} </td> --}}
                             </tr>
                             @endforeach
