@@ -21,6 +21,7 @@ class ProductSeeder extends Seeder
             "sku" => "B001",
             "stock" => "3",
             "category_id" => 1,
+            'status_id' => 1, 
 
         ]);
     }

@@ -9,7 +9,7 @@ class Status extends Model
 {
     use HasFactory;
     protected $fillable= [
-        "name"
+        "name", "slug",
     ];
 
     public function product () {
